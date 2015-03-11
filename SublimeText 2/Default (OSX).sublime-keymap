@@ -1,0 +1,54 @@
+[
+  {
+    "keys": ["super+l"],
+    "command": "show_overlay",
+    "args": {"overlay": "goto", "text": ":"}
+  },
+  {
+    "keys": ["ctrl+super+r"],
+    "command": "reveal_in_side_bar"
+  },
+  {
+    "keys": ["ctrl+shift+tab"],
+    "command": "focus_side_bar"
+  },
+  {
+    "keys": ["ctrl+tab"],
+    "command": "focus_group",
+    "args": {"group": 0}
+  },
+  {
+    "keys": ["super+alt+w"],
+    "command": "close_other_tabs"
+  },
+  {
+    "keys": ["ctrl+]"],
+    "command": "navigate_to_definition"
+  },
+  {
+    "keys": ["ctrl+shift+down"],
+    "command": "open_rspec_file",
+    "args": {"option": "next"}
+  },
+  {
+    "keys": ["super+shift+c"],
+    "command": "copy_path_to_clipboard"
+  },
+  { "keys": ["super+shift+v"], "command": "paste" },
+  { "keys": ["super+v"], "command": "paste_and_indent" },
+  {
+    "keys": ["super+alt+]"],
+    "command": "reindent",
+    "args": { "single_line": false }
+  },
+  {
+    "keys": ["super+r"],
+    "command": "run_tests",
+    "args": {"single": false}
+  },
+  {
+    "keys": ["super+shift+r"],
+    "command": "run_tests",
+    "args": {"single": true}
+  }
+]

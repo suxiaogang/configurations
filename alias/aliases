@@ -1,0 +1,128 @@
+#!/usr/bin/env bash
+
+# Bash Aliases
+# --------------------------------------------------
+
+# NAVIGATION
+# -----------------
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"
+alias -- -="cd -"
+
+# PERMISSIONS
+# -----------------    # owner  group  other
+alias 640='chmod 640'  # -rw-   r--    ---
+alias 644='chmod 644'  # -rw-   r--    r--
+alias 755='chmod 755'  # -rwx   r-x    r-x
+alias 775='chmod 775'  # -rwx   rwx    r-x
+
+# LOG FILES
+# -----------------
+alias tl='sudo tail -f $1'
+
+# PLACES
+# -----------------
+alias d="cd ~/Desktop"
+alias dl="cd ~/Downloads"
+alias p="cd ~/Projects"
+alias r="cd ~/Repositories"
+alias log="cd /var/log"
+
+# MISC
+# -----------------
+alias reload="source ~/.bashrc"
+alias sudo="sudo "
+
+# SHORTHAND
+# -----------------
+alias g="git"
+alias h="history"
+alias e="exit"
+alias c="clear"
+
+# PYTHON
+# -----------------
+alias vmk='mkvirtualenv'
+alias vrm='rmvirtualenv'
+
+# GREP
+# -----------------
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias gr='grep -Rnif /dev/stdin . <<<'
+
+# HOUSE KEEPING
+# -----------------
+TIDY_FORMAT="-type f -ls -delete"
+alias tidyosx="find . \( -name  \*.DS_Store -o -name \*.AppleDouble -o -name \*.LSOverride \) $TIDY_FORMAT"
+alias tidywin="find . \( -name Thumbs.db -o -name ehthumbs.db -o -name Desktop.ini \) $TIDY_FORMAT"
+alias tidypy="find . \( -name \*.pyc -o -name \*.pyo \) $TIDY_FORMAT"
+alias tidyplaylist="find . \( -name \*.m3u -o -name \*.pla -o -name \*.plc -o -name \.*pls \) $TIDY_FORMAT"
+
+# NETWORKING
+# -----------------
+alias sshcp='ssh-copy-id -i ~/id_rsa.pub $1'
+alias openports="sudo lsof -Pan -i tcp -i udp | grep -i 'listen'"
+alias rsync="rsync -v -P"
+alias scp="rsydinc -rsh=ssh"
+alias arpscan="sudo arp -an"
+
+alias nudp="sudo nmap -sS -sU -T4 -A -v -PE -PS22,25,80 -PA21,23,80,3389 "
+alias ntcp="sudo nmap -p 1-65535 -T4 -A -v -PE -PS22,25,80 -PA21,23,80,3389 "
+alias nping="nmap -sP -PE -PA21,23,80,3389 "
+alias nquick="sudo nmap -sV -T4 -O -F --version-light "
+alias ntracert="sudo nmap -sP -PE -PS22,25,80 -PA21,23,80,3389 -PU -PO --traceroute "
+
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+# LS
+# -----------------
+alias ls="ls --color=auto --group-directories-first -X --classify -G"
+alias l="ls"
+alias sl="ls"
+alias la="ls -a"
+alias ll="ls --human-readable --almost-all -l"
+alias lk='ls -lSr'
+alias lx="ls -lXB"
+alias lm='ls -al |more'
+alias lo='ls -l | sed -e 's/--x/1/g' -e 's/-w-/2/g' -e 's/-wx/3/g' -e 's/r--/4/g' -e 's/r-x/5/g' -e 's/rw-/6/g' -e 's/rwx/7/g' -e 's/---/0/g''
+alias tree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g;s/|\([^ ]\)/|-\1/"'
+
+# MERCURIAL
+# -----------------
+alias hM="hg commit -m 'Merged'"
+alias hpu="hg pull -u"
+alias hadd="hg add ."
+alias hdiff="hg diff"
+alias hl="hg log --no-merges -r: --stat"
+alias hm="hg merge"
+alias ho="hg out"
+alias hs="hg status"
+alias hundo="hg revert -C --all"
+alias hdiscard="hg update -C -r ."
+
+# VAGRANT
+# -----------------
+alias v='vagrant'
+alias vs='vagrant suspend'
+alias vp='vagrant provision'
+alias vu='vagrant up'
+alias vunp='vagrant up --no-provision'
+alias vh='vagrant halt'
+alias vr='vagrant reload'
+alias vss='vagrant ssh'
+
+# GIT
+# -----------------
+GIT_FORMAT="'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+alias gb='git branch'
+alias gl="git log --stat --abbrev-commit --pretty=format:$GIT_FORMAT"
+alias gp='git pull'
+alias greset="git reset --hard origin/master"
+alias gs='git status'
+alias gt="git log --graph --pretty=format:$GIT_FORMAT --abbrev-commit --date=relative --branches"
+alias gundo="git push -f origin HEAD^:master"

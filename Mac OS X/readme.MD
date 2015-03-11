@@ -1,4 +1,1 @@
-brew
-oh-my-zsh
-sublime text
-vagrant
+https://github.com/hzlzh/Best-App
