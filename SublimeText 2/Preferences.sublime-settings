@@ -44,26 +44,10 @@
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
 	"font_face": "Consolas",
-	"font_size": 13,
-	"word_wrap": "auto"
-	"highlight_line": true,
-	"highlight_modified_tabs": true,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"line_padding_bottom": 0.5,
-	"line_padding_top": 0.5,
-	"new_window_settings":
-	{
-		"show_minimap": false
-	},
-	"rulers":
-	[
-		80
-	],
+	"font_size": 11,
+	"word_wrap": "auto",
 	"save_on_focus_lost": true,
-	"tab_size": 2,
+	"tab_size": 4,
 	"theme": "Soda Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
