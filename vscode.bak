@@ -1,0 +1,77 @@
+{
+    // vscode
+    "editor.detectIndentation": true,
+    "editor.formatOnPaste": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+
+    // Editor
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.roundedSelection": false,
+    "editor.renderIndentGuides": true,
+    "editor.scrollBeyondLastLine": false,
+ 
+    //chester mix with MD theme
+    "editor.tokenColorCustomizations": {
+        "[Material Theme]": {
+            "comments": "#229977"
+        },
+        "[Chester Atom]": {
+            
+        }
+    },
+    
+
+    // Explorer
+    "explorer.openEditors.visible": 0,
+    "explorer.confirmDragAndDrop": false,
+    
+    // Files
+    "files.insertFinalNewline": true,
+    "files.exclude": {
+        ".idea/*": true,
+        "**/.git": true,
+        "**/__pycache__": true,
+        "**/**/*.pyc": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "/bin/*":true,
+        "/build/*":true,
+        "**/.DS_Store": true
+    },
+    "files.associations": {
+        "Brewfile": "ruby",
+        "vimrc": "viml"
+    },
+    
+    "window.zoomLevel": -0.2,
+    "workbench.colorTheme": "Chester",
+
+    // Search
+    // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/jspm_packages": true,
+        "**/bower_components": true
+    },
+    "extensions.ignoreRecommendations": true,
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "city-lights-icons-vsc",
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "workbench.sideBar.location": "left",
+
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#0F4870",
+        "statusBar.noFolderBackground": "#212121",
+        "statusBar.debuggingBackground": "#263238"
+    },
+    "explorer.confirmDelete": false,
+    "workbench.statusBar.feedback.visible": false,
+    "files.autoSave": "afterDelay"
+}
